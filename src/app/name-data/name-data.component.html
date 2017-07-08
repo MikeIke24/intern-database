@@ -3,15 +3,15 @@
 </h1>
 
 <div class="name-list">
-  <div *ngFor="let person of people" class="name-list-item" id="l{{person.name.toLowerCase().split(' ').join('')}}">
+  <div  *ngFor="let person of people" (click)="nameClick($event)" class="name-list-item" id="l{{person.name.toLowerCase().split(' ').join('')}}">
     <div class="name-list-text">
       {{person.name}}
     </div>
   </div>
 </div>
 
-<div style="overflow-x:auto;" class="table-contain" *ngFor="let person of people" id="{{person.name.toLowerCase().split(' ').join('')}}">
-  <table class="person">
+<div style="overflow-x:auto;" class="table-contain" *ngFor="let person of people" id="{{person.name.toLowerCase().split(' ').join('')}}" >
+  <table class="person" *ngIf="person.name.toLowerCase().split(' ').join('')==visibleId">
     <tr class="row name-row">
       <td class="title name-title">Name:</td>
       <td class="name info">{{person.name}}</td>
