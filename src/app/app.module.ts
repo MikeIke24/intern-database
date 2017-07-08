@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NameDataComponent } from './name-data/name-data.component';
 import { HttpModule }      from '@angular/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import * as $ from 'jquery';
 
 @NgModule({
@@ -12,7 +11,7 @@ import * as $ from 'jquery';
     NameDataComponent
   ],
   imports: [
-    BrowserModule,HttpModule,BrowserAnimationsModule
+    BrowserModule,HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

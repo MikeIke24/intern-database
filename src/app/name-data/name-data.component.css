@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=PT+Serif');
+
 
 html{
     font-size:16px;
 }
 *{
-    font-family: 'PT Serif', sans-serif;
+    font-family: serif;
 }
 #title{
     text-align:center;
