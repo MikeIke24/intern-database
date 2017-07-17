@@ -1,0 +1,97 @@
+
+.selection-panel{
+  width:20rem;
+  background-color: red;
+  height:100%;
+}
+.name-list-contain{
+  height:100%;
+  width:100%;
+    background-color: rgb(20,50,70);
+    overflow-y: auto;
+}
+.name-list-table{
+     background-color: rgb(20,50,70);
+     width:100%;
+}
+.name-list-item{
+    text-align:center;
+    background-color: rgb(20,50,70);
+    color:rgb(200,200,200);
+}
+.name-list-item:hover{
+    filter: brightness(1.4);
+    cursor:pointer;
+}
+.name-list-text{
+    padding:1rem 0;
+}
+
+
+#title{
+    text-align:center;
+}
+.landing{
+    text-align:center;
+}
+.line{
+    width: 80%;
+    height:1px;
+    text-align: center;
+    margin:1rem auto;
+    background-color: gray;
+}
+.placeholder{
+  width:80%;
+  height:1px;
+}
+.person {
+    margin:0 auto;
+    border-collapse: collapse;
+    margin-bottom:4rem;
+    table-layout: fixed;
+    width: 80%;
+}
+.person>tr>td {
+    border-bottom: 1px solid #ddd;
+    padding:1rem;
+}
+.row{
+    font-size:1rem;
+}
+.row:hover{
+    background-color:lightgray;
+}
+.title{
+width:10rem;
+}
+.name{
+}
+.desc{
+
+}
+
+w3-indigo{
+    background-color: rgb(20,50,70) !important;
+}
+.style-1::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.style-1::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+.style-1::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+
+

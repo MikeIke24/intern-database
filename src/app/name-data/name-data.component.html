@@ -1,13 +1,12 @@
-<h1 id="title">
-  ASME Intern Database
-</h1>
 
-<div class="name-list">
-  <div  *ngFor="let person of people" (click)="nameClick($event)" class="name-list-item" id="l{{person.name.toLowerCase().split(' ').join('')}}">
-    <div class="name-list-text">
+<div class="name-list-contain">
+<table class="name-list">
+  <tr  *ngFor="let person of people" (click)="nameClick($event)" class="name-list-item" id="l{{person.name.toLowerCase().split(' ').join('')}}">
+    <td class="name-list-text">
       {{person.name}}
-    </div>
-  </div>
+    </td>
+  </tr>
+</table>
 </div>
 
 <div style="overflow-x:auto;" class="table-contain" *ngFor="let person of people" id="{{person.name.toLowerCase().split(' ').join('')}}" >

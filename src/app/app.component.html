@@ -1,2 +1,108 @@
-<app-name-data></app-name-data>
+
+<div class="w3-sidebar w3-bar-block w3-collapse w3-card-2 w3-animate-left" style="width:20rem;" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
+<div class="selection-panel .side-content">
+<div class="name-list-contain style-1">
+<table class="name-list-table">
+  <tr  *ngFor="let person of people" (click)="nameClick($event)" class="name-list-item" id="l{{person.name.toLowerCase().split(' ').join('')}}">
+    <td class="name-list-text">
+      {{person.name}}
+    </td>
+  </tr>
+</table>
+</div>
+</div>
+</div>
+
+
+<div id="main-content" class="w3-main" style="margin-left:20rem">
+<div style="background-color: rgb(20,50,70);" class="w3-indigo">
+  <button style="background-color: rgb(20,50,70);" class="w3-button w3-indigo w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+</div>
+<div class="info-content">
+<h1 id="title">
+  ASME Intern Database
+  <div class="line"></div>
+</h1>
+<br />
+<div class="landing" *ngIf="visibleId === ''">
+  TEST
+</div>
+<table class="person">
+   <tr>
+      <td></td>
+      <td></td>
+    </tr>
+</table>
+
+
+
+<div style="overflow-x:auto;" class="table-contain style-1" *ngFor="let person of people" id="{{person.name.toLowerCase().split(' ').join('')}}" >
+  <table class="person" *ngIf="person.name.toLowerCase().split(' ').join('')==visibleId">
+    <tr class="row name-row">
+      <td class="title name-title">Name:</td>
+      <td class="name info">{{person.name}}</td>
+    </tr>
+    <tr class="row class-row">
+      <td class="title class-title">Class:</td>
+      <td class="class info">{{person.class}}</td>
+    </tr>
+    <tr class="row college-row">
+      <td class="title college-title">College:</td>
+      <td class="college info">{{person.college}}</td>
+    </tr>
+    <tr class="row phone-row">
+      <td class="title phone-title">Phone Number:</td>
+      <td class="phone info">{{person.phoneNumber}}</td>
+    </tr>
+    <tr class="row email-row">
+      <td class="title email-title">Email:</td>
+      <td class="email info">{{person.email}}</td>
+    </tr>
+  </table>
+
+    <table class="person" *ngIf="person.name.toLowerCase().split(' ').join('')==visibleId">
+    <tr class="row i1-row intern" *ngIf="person.internship1">
+      <td class="title i1-title">Internship #1:</td>
+      <td class="i1 info">{{person.internship1}}</td>
+    </tr>
+    <tr class="row d1-row desc" *ngIf="person.description1">
+      <td class="title d1-title">Description #1:</td>
+      <td class="d1 info">{{person.description1}}</td>
+    </tr>
+    <tr class="row i2-row intern" *ngIf="person.internship2">
+      <td class="title i2-title">Internship #2:</td>
+      <td class="i2 info">{{person.internship2}}</td>
+    </tr>
+    <tr class="row d2-row desc" *ngIf="person.description2">
+      <td class="title d2-title">Description #2:</td>
+      <td class="d2 info">{{person.description2}}</td>
+    </tr>
+    <tr class="row i3-row intern" *ngIf="person.internship3">
+      <td class="title i2-title">Internship #3:</td>
+      <td class="i3 info">{{person.internship3}}</td>
+    </tr>
+    <tr class="row d3-row desc" *ngIf="person.description3">
+      <td class="title d2-title">Description #3:</td>
+      <td class="d3 info">{{person.description3}}</td>
+    </tr>
+    <tr class="row i4-row intern" *ngIf="person.internship4">
+      <td class="title i2-title">Internship #4:</td>
+      <td class="i4 info">{{person.internship4}}</td>
+    </tr>
+    <tr class="row d4-row desc" *ngIf="person.description4">
+      <td class="title d2-title">Description #4:</td>
+      <td class="d4 info">{{person.description4}}</td>
+    </tr>
+    <tr class="row cw-row" *ngIf="person.currentWork">
+      <td class="title cw-title">Current Work:</td>
+      <td class="cw info">{{person.currentWork}}</td>
+    </tr>
+
+  </table>
+</div>
+</div>
+   
+</div>
+
 
